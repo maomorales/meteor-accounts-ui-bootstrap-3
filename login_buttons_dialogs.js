@@ -39,8 +39,8 @@
   Template._resetPasswordDialog.rendered = function() {
     var $modal = $(this.find('#login-buttons-reset-password-modal'));
     if ($modal && typeof($modal.modal) !== 'undefined') {
-			$modal.modal();
-		}
+      $modal.modal();
+    }
   };
 
   Template._resetPasswordDialog.events({
@@ -104,8 +104,8 @@
   Template._enrollAccountDialog.rendered = function() {
     $modal = $(this.find('#login-buttons-enroll-account-modal'));
     if ($modal && typeof($modal.modal) !== 'undefined') {
-			$modal.modal();
-		}
+      $modal.modal();
+    }
   };
 
   var enrollAccount = function () {
