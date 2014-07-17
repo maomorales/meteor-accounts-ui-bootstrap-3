@@ -1,7 +1,7 @@
 meteor-accounts-ui-bootstrap-3
 =====================================
 
-Meteor accounts-ui styled with twitter/bootstrap 3
+Meteor accounts-ui styled with twitter/bootstrap 3, modified to have spanish texts
 
 Prerequisites
 -------------
