@@ -432,7 +432,9 @@
     };
 
     var toggleDropdown = function() {
-        $('#login-dropdown-list .dropdown-menu').dropdown('toggle');
+        if ($('#login-dropdown-list .dropdown-menu').dropdown) {
+            $('#login-dropdown-list .dropdown-menu').dropdown('toggle');
+        }
     };
 
     var signup = function() {
@@ -513,10 +515,10 @@
                 if (error)
                     loginButtonsSession.errorMessage(error.reason || "Unknown error");
                 else
-                    loginButtonsSession.infoMessage("Email sent");
+                    loginButtonsSession.infoMessage("Correo enviado");
             });
         } else {
-            loginButtonsSession.infoMessage("Email sent");
+            loginButtonsSession.infoMessage("Correo enviado");
         }
     };
 
@@ -538,7 +540,7 @@
             if (error) {
                 loginButtonsSession.errorMessage(error.reason || "Unknown error");
             } else {
-                loginButtonsSession.infoMessage("Password changed");
+                loginButtonsSession.infoMessage("Contraseña cambiada");
 
                 // wait 3 seconds, then expire the msg
                 Meteor.setTimeout(function() {
@@ -555,7 +557,7 @@
             // notably not trimmed. a password could (?) start or end with a space
             var password = elementValueById('login-password');
             if (password !== passwordAgain) {
-                loginButtonsSession.errorMessage("Passwords don't match");
+                loginButtonsSession.errorMessage("Las contraseñas no coinciden");
                 return false;
             }
         }
